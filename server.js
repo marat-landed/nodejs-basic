@@ -111,7 +111,7 @@ app.get('/', function (req, res) {
   }
   */
   //res.send('Hello from NodeJS  at '+ new Date() + '. Edit 06-04-18 16:14');	
-  //res.sendFile(path.join(__dirname+'/index.html'));
+  //res.sendFile(path.join(__dirname+'/index.html')); // так работает и без оператора app.use(express.static(path.join(__dirname, 'public')));
   res.render(path.join(__dirname+'/index.html'));	
 });
 
