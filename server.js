@@ -17,7 +17,9 @@ module.exports = app;
 
 //  OpenShift sample Node application
 var express = require('express'),
-    app     = express();
+    app     = express(),
+	path    = require("path");
+
     //morgan  = require('morgan');
 
 /*
@@ -106,7 +108,8 @@ app.get('/', function (req, res) {
     res.render('index.html', { pageCountMessage : null});
   }
   */
-  res.send('Hello from NodeJS  at '+ new Date() + '. Edit 06-04-18 16:14');	
+  //res.send('Hello from NodeJS  at '+ new Date() + '. Edit 06-04-18 16:14');	
+  res.sendFile(path.join(__dirname+'/index.html'));
 });
 
 /*
